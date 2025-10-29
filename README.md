@@ -6,7 +6,10 @@ The goal of the project is to create a distributed open auction marketplace and 
 
 ## Problem Statement
 
-Today's Solana block-building ecosystem suffers from opaque, centralized systems dominated by private relays and closed bidding mechanisms. This lack of transparency forces searchers to overpay for inclusion, while validators have no verifiable way to prove fair ordering or earn optimal rewards. At the same time, users face fragmented submission paths (RPCs, TPUs, relays, block engine) that increase network congestion, and stakers are missing out on possible tips.
+The current Solana block-building ecosystem suffers from opaque, centralized systems dominated by private relays and closed bidding mechanisms. This lack of transparency forces searchers to overpay for transaction inclusion, while validators have no verifiable way to prove fair ordering or to earn optimal rewards.
+At the same time, users face fragmented submission paths — RPCs, TPUs, relays, and block engines — which increase network congestion. Stakers are also missing out on potential tips and revenue, as a major share is captured by intermediaries handling TPU transactions, commonly known as SQoS services (such as Nozomi, 0Slot, etc.). These providers charge users or searchers a tip that is routed through their wallets and then relayed to validators via pre-arranged SQoS deals.
+Because validators are often found through these intermediaries, they receive only a fraction of the total reward. For instance, if a searcher pays a 1 SOL tip, the validator might receive less than 0.05 SOL for the same transaction. Previously, searchers relied on Jito bundles, and validator rewards from Jito accounted for roughly 1% of total staking APY. However, this amount has since fallen to less than 0.2% APY.
+The missing share is now being captured by middlemen through private SQoS arrangements, creating a new class of intermediaries and further reducing validator earnings — effectively centralizing transaction flow and revenue distribution once again.
 
 ## Solution
 
